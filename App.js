@@ -52,7 +52,7 @@ export default function /* Componentes têm letra maiúscula */ App() {
       </TouchableOpacity>
       <Modal visible={modalVisible} animationType="fade" transparent={true}>
         <ModalSenha
-
+          senha = {valSenha} handleClose = {() => setModalVisible(false)}
         />
       </Modal>
     </View>
