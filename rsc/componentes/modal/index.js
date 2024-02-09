@@ -8,6 +8,8 @@ export function ModalSenha({senha, handleClose}){
 
     async function handleCopyPassword(){
         await Clipboard.setStringAsync(senha)
+        await saveItem("@pass", senha)
+        
         alert("Senha salva com sucesso!")
         handleClose();
     }
@@ -30,7 +32,8 @@ export function ModalSenha({senha, handleClose}){
                             Voltar
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={[style.button,style.btnSave]}>
+                    <TouchableOpacity style={[style.button,style.btnSave]}
+                    onPress={handleCopyPassword}>
                         <Text style={style.textSave}>
                             Salvar senha
                         </Text>

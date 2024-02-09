@@ -1,6 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 //dando problema aq
-const useStorage = () =>{
+const useStorage = () => {
 
     const getItem = async(key) =>{
         try{
@@ -46,5 +46,8 @@ const useStorage = () =>{
         removeItem
     }
 
+    
+
 
 }
+export default useStorage;
